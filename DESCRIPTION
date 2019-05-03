@@ -1,0 +1,14 @@
+Package: binomial
+Type: Package
+Title: Binomial Distribution
+Version: 0.1.0
+Author: Jarelly Martin
+Maintainer: Jarelly Martin <jarellymartin@berkeley.edut>
+Description: provides functions for a binomial distribution to calculate probabilities.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+Collate:
+  functions.R
+VignetteBuilder: knitr
+RoxygenNote: 6.1.1

@@ -1,0 +1,99 @@
+---
+title: "Getting Started with Binomial"
+author: "Jarelly Martin"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to the Binomial Package}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+```{r, echo =FALSE, message = FALSE}
+knitr::opts_chunk$set(collapse=T, comment = "#>")
+library(binomial)
+```
+
+
+## Binomial 
+
+The "binomial" package details the probabilistic calcultion of a Binomial random varible. The package includes functions to compute the mean, mode, variance, and etc.
+
+### Binomial Coefficient
+
+The "bin_choose()" function implements the binomial coefficient. In other words, it calculate the number of combinations in which k successes can occur in n trials. 
+```{r}
+bin_choose(trials = 10, success = 5)
+```
+### Binomial Probability
+
+The "bin_probability()" function takes in arguments success, trials, and probability to calculate the probability of getting k successes in n trials.
+```{r}
+bin_probability(success = 2, trials = 5, prob = 0.5)
+bin_probability(success = 0:2, trials = 5, prob = 0.5)
+```
+
+### Binomial Distribution
+
+The "bin_distribution()" function takes in arguments trials and prob to create an object \code{c("bindis", "data.frame")} where it outputs a data frame with the number successes followed by its probability. 
+```{r}
+bin_distribution(trials = 5, prob = 0.5)
+```
+The "plot.bindis()" function graphs a barplot to display the probability histogram of a binomial distribution object "bindis".
+```{r}
+distribution <- bin_distribution(trials=5, prob=0.5)
+plot(distribution)
+```
+
+### Binomial Cumulative
+
+The "bin_cumulative()" function takes in arguments trials and prob to create an object \code{c("bincum", "data.frame")} where it outputs a list with the number successes, probability, and its cumulative probability. 
+
+```{r}
+bin_cumulative(trials =5, prob = 0.5)
+```
+The "plot.bincum()" function graphs the cumulative distribution of a binomial distribution object "bincum"
+```{r}
+cumulative <- bin_cumulative(trials = 5, prob = 0.5)
+plot(cumulative)
+```
+
+### Binomial Variable
+
+The "bin_variable()" function takes in arguments trials and prob to create an object "binvar" that returns a list with the number of trials and probability of success.
+
+```{r}
+bin_variable(trials = 10, p = 0.3)
+```
+The "summary.binvar()" functions takes in an object of class "binvar" that outputs a list that contains trial, prob, mean, variance, mode, skewness, and kurtosis. 
+
+```{r}
+summary(bin_variable(trials = 10, p = 0.3))
+```
+### Mean
+The "bin_mean()" function takes in two arguments, trials and prob, to return the mean of a binomial random variable. 
+```{r}
+bin_mean(10,0.3)
+```
+
+### Variance 
+The "bin_variance()" function takes in two arguments, trials and prob, to return the mean of a binomial random variable.
+```{r}
+bin_variance(10,0.3)
+```
+### Mode
+The "bin_mode()" function takes in two arguments, trials and prob, to return the mode of a binomial random variable.
+```{r}
+bin_mode(10,0.3)
+```
+### Skewness
+The "bin_skewness" function takes in two argumentrs, trials and prob, to return the skewness of a binomial random variable.
+```{r}
+bin_skewness(10,0.3)
+```
+### Kurtosis
+The "bin_kurtosis" function takes in two argumentrs, trials and prob, to return the kurtosis of a binomial random variable. 
+```{r}
+bin_kurtosis(10,0.3)
+```
+
+
