@@ -9,7 +9,7 @@
 The purpose of Workout 3 is to create an R package in order to create functions to calcultate probabilities of a Binomial random variable. The package also includes adjacent functions to compute mean, variance, skewness, mode, and etc. The motivation behind the Binomial package and this workout is to learn how to implement and understand the functionalities behind an R package. 
 
 #### Functions (main)
-- bin_choose(trials, success)
+- 'bin_choose(trials, success)'
 - bin_probability(success, trials, prob)
 - bin_distribution(trials, prob)
 - plot.bindis()
