@@ -30,9 +30,9 @@ The purpose of Workout 3 is to create an R package in order to create functions 
 - `vignette`: detailed explanations of each function and its usage
 - `DESCRIPTION`: metadata
 - `NAMESPACE`: lists export and import directives
-- `README`
-- `devtools-flow.R`
-- `binomial.Rproj`
+- `README`: overview of package
+- `devtools-flow.R`: devtools workflow
+- `binomial.Rproj`: binomial R package
 
 
 #### Author 
