@@ -24,12 +24,12 @@ The purpose of Workout 3 is to create an R package in order to create functions 
 - bin_kurtosis(tirals, prob)
 
 ##### File Structure
-- R, r scripts that contain main, checker, and auxiliary functions
-- man, files for the manual documentation
-- tests, r script that contains testthat functions
-- vignette, detailed explanations of each function and its usage
-- DESCRIPTION, metadata
-- NAMESPACE, lists export and import directives
+- R: r scripts that contain main, checker, and auxiliary functions
+- man: files for the manual documentation
+- tests: r script that contains testthat functions
+- vignette: detailed explanations of each function and its usage
+- DESCRIPTION: metadata
+- NAMESPACE: lists export and import directives
 - README
 - devtools-flow.R
 - binomial.Rproj
